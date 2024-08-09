@@ -1,0 +1,473 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #F4F4F4;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    background-color: #F4F4F4;
+
+}
+
+.sidebar {
+    min-width: 200px;
+    background-color: #f4f4f4;
+
+}
+
+.sidebar ul {
+    width: 290px;
+    list-style-type: none;
+    padding: 0;
+    background-color: #fff;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+    padding-top: 21px;
+    padding-bottom: 20px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: rgb(23, 33, 57);
+    font-family: Futura PT;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.sidebar ul li a.active {
+    font-weight: bold;
+}
+
+.main-content {
+    flex: 1;
+    padding-left: 20px;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: #fff;
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+.header .logo img {
+    height: 40px;
+}
+
+.header .logout-btn {
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.header .logout-btn:hover {
+    background-color: #d32f2f;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sync {
+    color: #fff !important;
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+    border-radius: 5px;
+    background: rgb(23, 33, 57);
+    font-family: Futura PT;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 10%;
+    display: flex;
+    align-items: center;
+}
+
+.sync img {
+    margin-right: 10px;
+}
+
+.sync span {
+    font-family: Futura PT;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 13px;
+    letter-spacing: 10%;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search input[type="checkbox"] {
+
+    accent-color: #FF6600;
+}
+
+
+.search input[type="text"] {
+    padding: 5px;
+}
+
+.locations {
+    background-color: #F4F4F4;
+    padding: 20px;
+
+}
+
+.locations h1 {
+    margin: 0 0 20px 0;
+}
+
+.buttons {
+    justify-content: space-between;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.buttons div {
+    gap: 19px;
+    display: flex;
+}
+
+.btn-active {
+    background: rgb(23, 33, 57);
+    color: rgb(255, 255, 255) !important;
+}
+
+.buttons button {
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    color: rgb(23, 33, 57);
+    font-family: Futura PT;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    padding-left: 26.6px;
+    padding-right: 26.6px;
+    padding-top: 9px;
+    gap: 10px;
+}
+
+.buttons-too {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 43px;
+}
+
+.buttons button:hover {
+    background: rgb(255, 102, 0);
+}
+
+.location-item,
+.location-subitem {
+    display: flex;
+    padding: 10px 0;
+
+}
+
+.location-item {
+    font-weight: bold;
+}
+
+.location-subitem {
+    padding-left: 20px;
+}
+
+.location-subitem span:last-child {
+    color: #888;
+}
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 12px;
+    color: #888;
+    background-color: rgb(255, 255, 255);
+    padding-top: 32px;
+    padding-bottom: 32px;
+    gap: 10px;
+    margin-top: auto;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 400px;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background-color: #fff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button.delete {
+    background-color: #f44336;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+button.delete:hover {
+    background-color: #d32f2f;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input,
+form select,
+form label {
+    margin-bottom: 10px;
+}
+
+/* Add pointer cursor to edit and delete spans */
+.location-item .edit,
+.location-item .delete {
+    cursor: pointer;
+}
+
+
+li a img {
+    margin-left: 15px;
+    margin-right: 15.5px;
+}
+
+
+
+.location-subitem {
+    display: none;
+    padding-left: 20px;
+}
+
+.location-item {
+    cursor: pointer;
+    gap: 30px;
+}
+
+.location-item .edit,
+.location-item .delete {
+    cursor: pointer;
+}
+
+
+.btn-active a {
+    color: #fff !important;
+}
+
+.edit {
+    color: #FF6600;
+}
+
+.delete {
+    color: #FF5959;
+}
+
+.logout-btn_menu {
+    color: rgb(255, 102, 0);
+    margin-left: 70.5px;
+    padding-bottom: 29.5px;
+    font-family: Futura PT;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.logout-btn_menu img {
+    margin-right: 14.5px;
+}
+
+#createLocationBtn {
+    background: rgb(23, 33, 57);
+    padding-top: 17.5px;
+    padding-bottom: 17.5px;
+    padding-left: 51px;
+    padding-right: 51px;
+
+}
+
+.logout-btn_menu:hover {
+    background: rgb(255, 255, 255);
+
+}
+
+footer a {
+    align-items: center;
+    color: rgb(255, 102, 0);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+    text-decoration-line: underline;
+    display: flex;
+    padding-right: 30px;
+    padding-left: 510px;
+}
+
+footer a img {
+    padding-right: 7px;
+}
+
+#createLocationModal h2 {
+    text-align: center;
+}
+
+.form-input {
+    background-color: rgb(245, 245, 245);
+}
+
+#parent,
+#edit-parent {
+    background-color: rgb(245, 245, 245);
+}
+
+
+.form-check {
+    display: flex !important;
+    justify-content: space-between !important;
+    padding: 0 !important;
+}
+
+.form-check-input:focus {
+    outline: none;
+    /* Убирает стандартную обводку при фокусировке */
+    box-shadow: none;
+    /* Убирает тень при фокусировке */
+}
+
+/* Убираем обводку и изменяем цвет фона переключателя в неактивном состоянии */
+.form-check-input {
+    background-color: #ddd;
+    /* Цвет фона переключателя в неактивном состоянии */
+    border-color: #ddd;
+    /* Цвет границы переключателя в неактивном состоянии */
+}
+
+/* Цвет фона переключателя в активном состоянии */
+.form-check-input:checked {
+    background-color: #FF6600;
+    /* Цвет фона переключателя при включении */
+    border-color: #FF6600;
+    /* Цвет границы переключателя при включении */
+}
+
+/* Цвет ползунка переключателя при активном состоянии */
+.form-check-input:checked::before {
+    background-color: #fff;
+    /* Цвет ползунка при включении */
+}
+
+.modal-btn button {
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    color: rgb(23, 33, 57);
+    font-family: Futura PT;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    padding-left: 26.6px;
+    padding-right: 26.6px;
+    padding-top: 9px;
+    position: relative;
+    width: 193px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;  
+    
+}
+
+.modal-btn {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+button.modal-btn_sozdat {
+    border-radius: 5px;
+    background: rgb(23, 33, 57);
+    color: #fff;
+}
+
+button.modal-btn_otmena {
+    box-sizing: border-box;
+    border: 1px solid rgb(23, 33, 57);
+    border-radius: 5px;
+    background: rgb(255, 255, 255);
+}
+
+.img-delet {
+    padding-right: 5px;
+}

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locations Management</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="logo">
+                <img src="image/logo.svg" alt="Logo" />
+            </div>
+            <button class="logout-btn"> <img src="image/Vector.svg" alt="выход" /></button>
+        </header>
+        <div class="container">
+            <div class="sidebar">
+                <ul>
+                    <li><a href="#"> <img src="image/Сочетание 1.svg" alt="" />Имущество</a></li>
+                    <li><a href="#"><img src="image/Сочетание 2.svg" alt="" />Инвентаризация</a></li>
+                    <li><a href="#"><img src="image/Сочетание 3.svg" alt="" />Сотрудники</a></li>
+                    <li><a href="#"><img src="image/Сочетание 4.svg" alt="" />Уведомления</a></li>
+                    <li class="btn-active"><a href="#" class="active"><img src="image/Сочетание 5.svg"
+                                alt="" />Локации</a>
+                    </li>
+                    <li><a href="#"><img src="image/Сочетание 6.svg" alt="" />Настройки</a></li>
+                    <button class="logout-btn_menu"> <img src="image/Галочка.svg" alt="Скрыть меню" />Скрыть
+                        меню</button>
+                </ul>
+            </div>
+            <div class="main-content">
+                <div class="locations">
+                    <h1>Локации / Все локации</h1>
+                    <div class="buttons-blok">
+                        <div class="buttons">
+                            <div>
+                                <button class="btn-active">Все локации</button>
+                                <button>Импорт/Экспорт</button>
+                                <button>настройки</button>
+                            </div>
+                            <div>
+                                <button class="sync"><img src="image/Frame 254.png" alt="" />Синхронизация
+                                    <span>[17.05.2024
+                                        15:32:11]</span></button>
+                            </div>
+                        </div>
+                        <div class="buttons-too">
+                            <button id="createLocationBtn">+ СОЗДАТЬ ЛОКАЦИЮ</button>
+                            <div class="search">
+                                <input type="checkbox" id="exactSearch" />
+                                <label for="exactSearch">Поиск по точному вхождению</label>
+                                <input type="text" placeholder="Поиск" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="location-list">
+                        <div class="location-item" onclick="toggleSubitems(this)">
+                            <img src="image/plus.svg" alt="" />
+                            <span class="location-name">Локация 1</span>
+                            <span class="location-count">512</span>
+                            <span class="edit"
+                                onclick="openEditLocationModal('Локация 1'); event.stopPropagation();">Редактировать</span>
+                            <span class="delete"
+                                onclick="openDeleteLocationModal('Локация 1'); event.stopPropagation();"><img class="img-delet" src="image/Удалить.svg" alt="" /> Удалить</span>
+                        </div>
+                        <div class="location-subitem">
+                            <div class="location-item" onclick="toggleSubitems(this)">
+                                <img src="image/plus.svg" alt="" />
+                                <span class="location-name">Подотдел 1</span>
+                                <span>Для утерь</span>
+                            </div>
+                            <div class="location-subitem">
+                                <span>Подотдел 1</span>
+                            </div>
+                        </div>
+                        <div class="location-subitem">
+                            <div class="location-item" onclick="toggleSubitems(this)">
+                                <span class="location-name">Подотдел 2</span>
+                            </div>
+                            <div class="location-subitem">
+                                <span>Подотдел 1</span>
+                                <span>Виртуальный</span>
+                            </div>
+                        </div>
+                        <div class="location-subitem">
+                            <div class="location-item" onclick="toggleSubitems(this)">
+                                <span class="location-name">Подотдел 3</span>
+                            </div>
+                            <div class="location-subitem">
+                                <span>Подотдел 3</span>
+                                <span>Для учета</span>
+                            </div>
+                        </div>
+                        <div class="location-item" onclick="toggleSubitems(this)">
+                            <img src="image/plus.svg" alt="" />
+                            <span class="location-name">Локация 2</span>
+                            <span class="location-count">100</span>
+                            <span class="edit"
+                                onclick="openEditLocationModal('Локация 2'); event.stopPropagation();">Редактировать</span>
+                            <span class="delete"
+                                onclick="openDeleteLocationModal('Локация 2'); event.stopPropagation();">Удалить</span>
+                        </div>
+
+                        <div class="location-item" onclick="toggleSubitems(this)">
+                            <img src="image/plus.svg" alt="" />
+                            <span class="location-name">Локация 3</span>
+                            <span class="location-count">100</span>
+                            <span class="edit"
+                                onclick="openEditLocationModal('Локация 3'); event.stopPropagation();">Редактировать</span>
+                            <span class="delete"
+                                onclick="openDeleteLocationModal('Локация 3'); event.stopPropagation();">Удалить</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div>Последний прием 20.09.2021 18:36:21</div>
+            <div>Последняя передача 20.09.2021 18:38:21</div>
+            <a href="#"> <img src="image/doc.svg" alt="" />Документация</a>
+        </footer>
+        <div id="createLocationModal" class="modal">
+            <div class="modal-content">
+
+                <h2>Создать локацию</h2>
+                <form>
+                    <input type="text" class="form-input" id="name" name="name" placeholder="Название">
+                    <input type="text" class="form-input" id="barcode" name="barcode" placeholder="Штрихкод">
+                    <input type="text" class="form-input" id="rfid" name="rfid" placeholder="RFID">
+
+                    <select id="parent" name="parent">
+                        <option value="location1">Вложенность</option>
+                    </select>
+
+                    <div class="form-check form-switch">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Виртуальная локация</label>
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+
+                    </div>
+                    <div class="form-check form-switch">
+                        <label class="form-check-label" for="flexSwitchCheckChecked">Локация для утерь</label>
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+
+                    </div>
+                    <div class="modal-btn">
+                        <button class="modal-btn_sozdat" type="submit">Создать</button>
+                        <button class="modal-btn_otmena" type="button"
+                            onclick="closeModal('createLocationModal')">Отменить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="editLocationModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('editLocationModal')">&times;</span>
+                <h2 id="editLocationTitle">Изменить локацию %название%</h2>
+                <form>
+                    <label for="edit-name">Название</label>
+                    <input type="text" class="form-input"  id="edit-name" name="edit-name" value="Локация 11">
+
+                    <label for="edit-barcode">Штрихкод</label>
+                    <input type="text"  class="form-input"  id="edit-barcode" name="edit-barcode" value="1123123123123">
+
+                    <label for="edit-rfid">RFID</label>
+                    <input type="text" class="form-input"  id="edit-rfid" name="edit-rfid" value="1123123123123">
+
+                    <label for="edit-parent">Вложенность</label>
+                    <select id="edit-parent" name="edit-parent">
+                        <option value="location1">Локация 1</option>
+                    </select>
+
+                    <div class="form-check form-switch">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Виртуальная локация</label>
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+
+                    </div>
+                    <div class="form-check form-switch">
+                        <label class="form-check-label" for="flexSwitchCheckChecked">Локация для утерь</label>
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+
+                    </div>
+
+                    <div class="modal-btn">
+                    <button type="button" class="modal-btn_otmena"  class="delete" onclick="deleteLocation()"><img class="img-delet" src="image/Удалить.svg" alt="" />Удалить</button>
+                    <button type="button"  class="modal-btn_otmena" onclick="closeModal('editLocationModal')">Отменить</button>
+                    </div>
+                    <button class="modal-btn_sozdat" type="submit">Сохранить</button>
+                </form>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </div>
+</body>
+
+</html>

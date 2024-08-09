@@ -15,6 +15,7 @@ body {
 .container {
     display: flex;
     background-color: #F4F4F4;
+    margin: 0 auto;
 
 }
 
@@ -213,7 +214,6 @@ footer {
     background-color: rgb(255, 255, 255);
     padding-top: 32px;
     padding-bottom: 32px;
-    gap: 10px;
     margin-top: auto;
 }
 
@@ -331,7 +331,7 @@ li a img {
 
 .logout-btn_menu {
     color: rgb(255, 102, 0);
-    margin-left: 70.5px;
+    margin-left: 50.5px;
     padding-bottom: 29.5px;
     font-family: Futura PT;
     font-size: 17px;
@@ -368,7 +368,6 @@ footer a {
     text-decoration-line: underline;
     display: flex;
     padding-right: 30px;
-    padding-left: 510px;
 }
 
 footer a img {
@@ -445,8 +444,8 @@ footer a img {
     justify-content: center;
     align-items: center;
     padding: 10px;
-    border-radius: 5px;  
-    
+    border-radius: 5px;
+
 }
 
 .modal-btn {
@@ -466,8 +465,77 @@ button.modal-btn_otmena {
     border: 1px solid rgb(23, 33, 57);
     border-radius: 5px;
     background: rgb(255, 255, 255);
+    color: black;
 }
 
 .img-delet {
     padding-right: 5px;
+}
+
+input[type="checkbox"] {
+    accent-color: #FF6600;
+}
+
+footer .container {
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    gap: 10px;
+}
+
+
+thead tr{
+    display: flex;
+    gap: 10px;
+}
+
+.table-settings h2{
+    margin: 0 0 20px 0;
+}
+
+.table-settings table {
+   
+    border-collapse: collapse;
+}
+
+.table-settings th, .table-settings td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    text-align: center;
+    width: 115px;
+}
+
+.table-settings th {
+    background-color: #f2f2f2;
+}
+
+
+
+.btn-active:hover {
+    background-color: #e66a00;
+}
+
+table {
+    display: flex;
+    flex-direction: column;
+}
+
+thead {
+    display: flex;
+    justify-content: flex-end;
+}
+
+tbody {
+    display: flex;
+    flex-direction: column;
+}
+tr {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+table  input[type="number"] {
+    width: 100px;
+    text-align: center;
 }

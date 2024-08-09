@@ -77,6 +77,7 @@ body {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    margin: 0;
 }
 
 .header .logout-btn:hover {
@@ -212,8 +213,8 @@ footer {
     font-size: 12px;
     color: #888;
     background-color: rgb(255, 255, 255);
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     margin-top: auto;
 }
 
@@ -396,31 +397,27 @@ footer a img {
 
 .form-check-input:focus {
     outline: none;
-    /* Убирает стандартную обводку при фокусировке */
+
     box-shadow: none;
-    /* Убирает тень при фокусировке */
+
 }
 
-/* Убираем обводку и изменяем цвет фона переключателя в неактивном состоянии */
+
 .form-check-input {
     background-color: #ddd;
-    /* Цвет фона переключателя в неактивном состоянии */
     border-color: #ddd;
-    /* Цвет границы переключателя в неактивном состоянии */
+
 }
 
-/* Цвет фона переключателя в активном состоянии */
 .form-check-input:checked {
     background-color: #FF6600;
-    /* Цвет фона переключателя при включении */
     border-color: #FF6600;
-    /* Цвет границы переключателя при включении */
+
 }
 
-/* Цвет ползунка переключателя при активном состоянии */
 .form-check-input:checked::before {
     background-color: #fff;
-    /* Цвет ползунка при включении */
+
 }
 
 .modal-btn button {
@@ -483,30 +480,32 @@ footer .container {
 }
 
 
-thead tr{
+thead tr {
     display: flex;
     gap: 10px;
 }
 
-.table-settings h2{
+.table-settings h2 {
     margin: 0 0 20px 0;
 }
 
 .table-settings table {
-   
+
     border-collapse: collapse;
 }
 
-.table-settings th, .table-settings td {
+.table-settings th,
+.table-settings td {
     border: 1px solid #ddd;
-    padding: 8px;
+    padding: 5px;
     text-align: left;
     text-align: center;
     width: 115px;
+    font-size: 12px;
 }
 
 .table-settings th {
-    background-color: #f2f2f2;
+    
 }
 
 
@@ -518,6 +517,8 @@ thead tr{
 table {
     display: flex;
     flex-direction: column;
+    border-collapse: collapse;
+    border: none;
 }
 
 thead {
@@ -529,13 +530,37 @@ tbody {
     display: flex;
     flex-direction: column;
 }
+
 tr {
     display: flex;
     justify-content: flex-end;
     gap: 10px;
+    border: none;
 }
 
-table  input[type="number"] {
+table input[type="number"] {
     width: 100px;
     text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    border: none;
+}
+
+th,
+td {
+    border: none;
+}
+
+.tron {
+    background-color: #dbd9d9;
+}
+
+section.table-settings {
+    margin-bottom: 40px;
+}
+
+table {
+    margin-bottom: 20px;
 }

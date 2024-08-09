@@ -269,8 +269,8 @@ button.delete {
     background-color: #f44336;
 }
 
-button:hover {
-    background-color: #555;
+.actions button:hover {
+    background-color:  rgb(255, 102, 0);
 }
 
 button.delete:hover {
@@ -510,7 +510,7 @@ thead tr {
 
 
 
-.btn-active:hover {
+li:hover {
     background-color: #e66a00;
 }
 
